@@ -5,7 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Café Aurora</title>
+    <title>wish coffee</title>
+
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
+    <style>
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f5efe6;
+        color: #3e2723;
+    }
+
+    header {
+        background-color: #6f4e37;
+        color: white;
+        text-align: center;
+        padding: 40px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    nav {
+        background-color: #3e2723;
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #d7ccc8;
+    }
+
+    main {
+        width: 80%;
+        margin: auto;
+        padding: 30px;
+    }
+
+    section {
+        background-color: white;
+        margin-bottom: 30px;
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    h2 {
+        color: #6f4e37;
+    }
+
+    h3 {
+        color: #795548;
+    }
+
+    img {
+        width: 400px;
+        max-width: 100%;
+        border-radius: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input,
+    textarea {
+        margin-bottom: 15px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    button {
+        background-color: #6f4e37;
+        color: white;
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #4e342e;
+    }
+
+    footer {
+        background-color: #3e2723;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    </style>
 </head>
 
 <body>
@@ -29,6 +141,54 @@
         <a href="#contacto">Contacto</a>
     </nav>
 
+<!-- Sección de contacto -->
+<section id="contacto">
+
+    <h2>Contacto</h2>
+
+    <p>
+        Si deseas conocer más información sobre wish coffee
+        o realizar alguna consulta, envíanos un mensaje.
+    </p>
+
+    <form>
+
+        <label for="nombre">Nombre:</label>
+
+        <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Escribe tu nombre"
+            required>
+
+
+        <label for="correo">Correo electrónico:</label>
+
+        <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="ejemplo@correo.com"
+            required>
+
+
+        <label for="mensaje">Mensaje:</label>
+
+        <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="Escribe tu mensaje"
+            required></textarea>
+
+
+        <button type="submit">
+            Enviar mensaje
+        </button>
+
+    </form>
+
+</section>
 
     <!-- ================= CONTENIDO PRINCIPAL ================= -->
     <main>
