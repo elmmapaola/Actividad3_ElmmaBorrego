@@ -1,0 +1,205 @@
+/* =========================================
+   ESTILOS GENERALES
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f5efe6;
+    color: #3e2723;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+header {
+    background-color: #6f4e37;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px solid #bcaaa4;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   MENÚ DE NAVEGACIÓN
+   ========================================= */
+
+nav {
+    background-color: #3e2723;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 16px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+/* Efecto visual al pasar el cursor */
+nav a:hover {
+    background-color: #d7ccc8;
+    color: #3e2723;
+}
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+
+.contenedor {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 25px;
+}
+
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+   ========================================= */
+
+main {
+    flex: 3;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border: 1px solid #d7ccc8;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #6f4e37;
+    border-bottom: 2px solid #bcaaa4;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #795548;
+}
+
+img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   FORMULARIO DE CONTACTO
+   ========================================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #bcaaa4;
+    border-radius: 5px;
+}
+
+textarea {
+    min-height: 120px;
+}
+
+button {
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #4e342e;
+}
+
+
+/* =========================================
+   BARRA LATERAL
+   ========================================= */
+
+aside {
+    flex: 1;
+    background-color: #ead8d1;
+    padding: 20px;
+    border: 2px solid #bcaaa4;
+    border-radius: 10px;
+}
+
+aside h2 {
+    text-align: center;
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+
+footer {
+    background-color: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 5px solid #bcaaa4;
+}
+
+
+/* =========================================
+   DISEÑO PARA PANTALLAS PEQUEÑAS
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .contenedor {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
