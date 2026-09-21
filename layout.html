@@ -35,7 +35,7 @@
         <a href="#inicio">Inicio</a>
         <a href="#nosotros">Nosotros</a>
         <a href="#menu">Menú</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#registro">Registro</a>
 
     </nav>
 
@@ -48,7 +48,7 @@
         <main>
 
 
-            <!-- Sección de inicio -->
+            <!-- ================= INICIO ================= -->
             <section id="inicio">
 
                 <h2>Bienvenidos a wish coffee</h2>
@@ -66,7 +66,7 @@
             </section>
 
 
-            <!-- Sección sobre nosotros -->
+            <!-- ================= NOSOTROS ================= -->
             <section id="nosotros">
 
                 <h2>Sobre nosotros</h2>
@@ -90,7 +90,7 @@
             </section>
 
 
-            <!-- Sección de menú -->
+            <!-- ================= MENÚ ================= -->
             <section id="menu">
 
                 <h2>Nuestro menú</h2>
@@ -114,82 +114,231 @@
                     <li>Chocolate caliente</li>
                 </ol>
 
-                <h3>Enlaces de interés</h3>
-
-                <p>
-                    Puedes conocer más sobre el mundo del café
-                    en los siguientes sitios:
-                </p>
-
-                <ul>
-
-                    <li>
-                        <a href="https://www.starbucks.com/" target="_blank">
-                            Starbucks
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.nescafe.com/" target="_blank">
-                            Nescafé
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.coffeeandhealth.org/" target="_blank">
-                            Coffee & Health
-                        </a>
-                    </li>
-
-                </ul>
-
             </section>
 
 
-            <!-- ================= CONTACTO ================= -->
-            <section id="contacto">
+            <!-- ================= FORMULARIO DE REGISTRO ================= -->
+            <section id="registro">
 
-                <h2>Contacto</h2>
+                <h2>Registro de clientes</h2>
 
                 <p>
-                    Si deseas conocer más información sobre wish coffee
-                    o realizar alguna consulta, envíanos un mensaje.
+                    Completa el siguiente formulario para registrarte
+                    como cliente de wish coffee.
                 </p>
 
-                <form>
 
-                    <label for="nombre">Nombre:</label>
+                <!-- novalidate permite mostrar nuestras validaciones
+                     personalizadas mediante JavaScript -->
+                <form id="formulario" novalidate>
+
+
+                    <!-- ================= NOMBRE ================= -->
+                    <label for="nombre">
+                        Nombre completo:
+                    </label>
 
                     <input
                         type="text"
                         id="nombre"
                         name="nombre"
-                        placeholder="Escribe tu nombre"
-                        required>
+                        placeholder="Escribe tu nombre completo">
+
+                    <small
+                        class="error"
+                        id="errorNombre">
+                    </small>
 
 
-                    <label for="correo">Correo electrónico:</label>
+                    <!-- ================= CORREO ================= -->
+                    <label for="correo">
+                        Correo electrónico:
+                    </label>
 
                     <input
                         type="email"
                         id="correo"
                         name="correo"
-                        placeholder="ejemplo@correo.com"
-                        required>
+                        placeholder="ejemplo@correo.com">
+
+                    <small
+                        class="error"
+                        id="errorCorreo">
+                    </small>
 
 
-                    <label for="mensaje">Mensaje:</label>
+                    <!-- ================= TELÉFONO ================= -->
+                    <label for="telefono">
+                        Teléfono:
+                    </label>
 
-                    <textarea
-                        id="mensaje"
-                        name="mensaje"
-                        placeholder="Escribe tu mensaje"
-                        required></textarea>
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        inputmode="numeric"
+                        maxlength="10"
+                        placeholder="Ejemplo: 4421234567">
+
+                    <small
+                        class="error"
+                        id="errorTelefono">
+                    </small>
 
 
+                    <!-- ================= EDAD ================= -->
+                    <label for="edad">
+                        Edad:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="edad"
+                        name="edad"
+                        min="1"
+                        max="120"
+                        placeholder="Escribe tu edad">
+
+                    <small
+                        class="error"
+                        id="errorEdad">
+                    </small>
+
+
+                    <!-- ================= CONTRASEÑA ================= -->
+                    <label for="contrasena">
+                        Contraseña:
+                    </label>
+
+                    <input
+                        type="password"
+                        id="contrasena"
+                        name="contrasena"
+                        placeholder="Mínimo 8 caracteres">
+
+                    <small
+                        class="error"
+                        id="errorContrasena">
+                    </small>
+
+
+                    <!-- ================= BEBIDA FAVORITA ================= -->
+                    <label for="bebida">
+                        Bebida favorita:
+                    </label>
+
+                    <select
+                        id="bebida"
+                        name="bebida">
+
+                        <option value="">
+                            Selecciona una opción
+                        </option>
+
+                        <option value="matcha">
+                            Matcha
+                        </option>
+
+                        <option value="americano">
+                            Americano
+                        </option>
+
+                        <option value="cappuccino">
+                            Cappuccino
+                        </option>
+
+                        <option value="latte">
+                            Latte
+                        </option>
+
+                        <option value="chocolate">
+                            Chocolate caliente
+                        </option>
+
+                    </select>
+
+                    <small
+                        class="error"
+                        id="errorBebida">
+                    </small>
+
+
+                    <!-- ================= BOTONES RADIO ================= -->
+                    <fieldset id="grupoVisita">
+
+                        <legend>
+                            ¿Cómo prefieres visitar wish coffee?
+                        </legend>
+
+                        <label class="opcion">
+
+                            <input
+                                type="radio"
+                                name="visita"
+                                value="amigos">
+
+                            Con amigos
+
+                        </label>
+
+                        <label class="opcion">
+
+                            <input
+                                type="radio"
+                                name="visita"
+                                value="estudiar">
+
+                            Para estudiar
+
+                        </label>
+
+                        <label class="opcion">
+
+                            <input
+                                type="radio"
+                                name="visita"
+                                value="solo">
+
+                            Por mi cuenta
+
+                        </label>
+
+                    </fieldset>
+
+                    <small
+                        class="error"
+                        id="errorVisita">
+                    </small>
+
+
+                    <!-- ================= CHECKBOX ================= -->
+                    <label class="checkbox">
+
+                        <input
+                            type="checkbox"
+                            id="terminos"
+                            name="terminos">
+
+                        <span>
+                            Acepto los términos y condiciones.
+                        </span>
+
+                    </label>
+
+                    <small
+                        class="error"
+                        id="errorTerminos">
+                    </small>
+
+
+                    <!-- ================= BOTÓN ================= -->
                     <button type="submit">
-                        Enviar mensaje
+                        Registrarme
                     </button>
+
+
+                    <!-- Mensaje mostrado cuando todos los datos son válidos -->
+                    <p id="mensajeExito"></p>
 
                 </form>
 
@@ -213,6 +362,7 @@
                 9:00 a.m. - 6:00 p.m.
             </p>
 
+
             <h2>Promoción</h2>
 
             <p>
@@ -233,6 +383,11 @@
         </p>
 
     </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <!-- Archivo externo encargado de validar el formulario -->
+    <script src="validacion.js"></script>
 
 </body>
 

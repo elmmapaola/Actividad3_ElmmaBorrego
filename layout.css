@@ -58,7 +58,7 @@ nav a {
     border-radius: 6px;
 }
 
-/* Efecto visual al pasar el cursor */
+/* Efecto al pasar el cursor sobre el menú */
 nav a:hover {
     background-color: #d7ccc8;
     color: #3e2723;
@@ -75,6 +75,7 @@ nav a:hover {
     max-width: 1200px;
     margin: 30px auto;
     gap: 25px;
+    align-items: flex-start;
 }
 
 
@@ -104,6 +105,11 @@ h3 {
     color: #795548;
 }
 
+
+/* =========================================
+   IMÁGENES
+   ========================================= */
+
 img {
     width: 400px;
     max-width: 100%;
@@ -115,13 +121,13 @@ img {
 
 
 /* =========================================
-   FORMULARIO DE CONTACTO
+   FORMULARIO DE REGISTRO
    ========================================= */
 
 form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 550px;
 }
 
 label {
@@ -129,31 +135,145 @@ label {
     font-weight: bold;
 }
 
+
+/* Campos principales del formulario */
 input,
-textarea {
-    margin-bottom: 15px;
-    padding: 10px;
+select {
+    width: 100%;
+    padding: 11px;
     font-size: 16px;
+    color: #3e2723;
+    background-color: white;
+    border: 1px solid #bcaaa4;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+/* Efecto al seleccionar un campo */
+input:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #6f4e37;
+}
+
+
+/* =========================================
+   BOTONES DE OPCIÓN
+   ========================================= */
+
+fieldset {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 15px;
     border: 1px solid #bcaaa4;
     border-radius: 5px;
 }
 
-textarea {
-    min-height: 120px;
+legend {
+    color: #6f4e37;
+    font-weight: bold;
+    padding: 0 5px;
 }
+
+fieldset .opcion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+    font-weight: normal;
+}
+
+fieldset .opcion input {
+    width: auto;
+    margin: 0;
+}
+
+
+/* =========================================
+   CHECKBOX
+   ========================================= */
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.checkbox input {
+    width: auto;
+    margin: 0;
+}
+
+
+/* =========================================
+   BOTÓN DEL FORMULARIO
+   ========================================= */
 
 button {
     background-color: #6f4e37;
     color: white;
     border: none;
-    padding: 12px;
+    padding: 13px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #4e342e;
+}
+
+
+/* =========================================
+   MENSAJES DE VALIDACIÓN
+   ========================================= */
+
+/* Texto de los errores */
+.error {
+    display: block;
+    color: #d32f2f;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 15px;
+    min-height: 5px;
+}
+
+
+/* Campo que contiene información incorrecta */
+.campo-error {
+    border: 2px solid #d32f2f;
+    background-color: #fff5f5;
+}
+
+
+/* Mantiene rojo el borde de un campo incorrecto
+   aunque el usuario lo tenga seleccionado */
+input.campo-error:focus,
+select.campo-error:focus {
+    border-color: #d32f2f;
+}
+
+
+/* Grupo de botones radio con error */
+.grupo-error {
+    border: 2px solid #d32f2f;
+    background-color: #fff5f5;
+}
+
+
+/* Mensaje mostrado cuando el registro es correcto */
+#mensajeExito {
+    color: #2e7d32;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
 }
 
 
@@ -201,5 +321,13 @@ footer {
     nav a {
         display: block;
         margin: 5px 0;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    form {
+        max-width: 100%;
     }
 }
